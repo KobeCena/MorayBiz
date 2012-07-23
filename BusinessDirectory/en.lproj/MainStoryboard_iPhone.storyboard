@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2809" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Mx2-G3-Msc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2818" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Mx2-G3-Msc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1884"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1900"/>
     </dependencies>
     <scenes>
         <!--Splash View Controller - Moray Business Directory-->
@@ -107,6 +107,14 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableFooterView" contentMode="redraw" id="Men-H7-mFN">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="12" id="Anx-Fe-40q"/>
+                            </connections>
+                        </searchBar>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="12" id="16"/>
@@ -117,10 +125,21 @@
                     <navigationItem key="navigationItem" title="Name" id="35"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="searchBar" destination="Men-H7-mFN" id="rjg-Mu-3X9"/>
+                        <outlet property="searchDisplayController" destination="CCp-fa-Vge" id="CAQ-W0-Ww2"/>
                         <segue destination="IfH-OZ-ZfD" kind="push" identifier="NameDetailPush" id="fxR-Th-DoY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="CCp-fa-Vge">
+                    <connections>
+                        <outlet property="delegate" destination="12" id="aX9-S1-gGM"/>
+                        <outlet property="searchBar" destination="Men-H7-mFN" id="9UQ-fj-qcG"/>
+                        <outlet property="searchContentsController" destination="12" id="nUH-Py-Xjq"/>
+                        <outlet property="searchResultsDataSource" destination="12" id="Mus-zn-8FC"/>
+                        <outlet property="searchResultsDelegate" destination="12" id="bVV-vo-gEb"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1111" y="696"/>
         </scene>
@@ -604,6 +623,122 @@
         <image name="house.png" width="26" height="26"/>
         <image name="pencil.png" width="26" height="26"/>
     </resources>
+    <classes>
+        <class className="BusDetailsViewControllerCategory" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusDetailsViewControllerCategory.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="BusDetailsViewControllerName" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusDetailsViewControllerName.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="BusDetailsViewControllerTown" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusDetailsViewControllerTown.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="DetailViewControllerCategory" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewControllerCategory.h"/>
+            <relationships>
+                <relationship kind="action" name="detailsPressed:"/>
+                <relationship kind="action" name="searchPressed:"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="searchBarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DetailViewControllerName" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewControllerName.h"/>
+            <relationships>
+                <relationship kind="action" name="detailsPressed:"/>
+                <relationship kind="action" name="searchPressed:"/>
+                <relationship kind="outlet" name="barButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="detailTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DetailViewControllerTown" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewControllerTown.h"/>
+            <relationships>
+                <relationship kind="action" name="detailsPressed:"/>
+                <relationship kind="action" name="searchPressed:"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MapsWebViewControllerCat" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapsWebViewControllerCat.h"/>
+        </class>
+        <class className="MapsWebViewControllerName" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapsWebViewControllerName.h"/>
+        </class>
+        <class className="MapsWebViewControllerTown" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapsWebViewControllerTown.h"/>
+        </class>
+        <class className="MasterViewControllerCategory" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewControllerCategory.h"/>
+            <relationships>
+                <relationship kind="outlet" name="navBar" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="MasterViewControllerCategory1" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewControllerCategory1.h"/>
+        </class>
+        <class className="MasterViewControllerName" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewControllerName.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
+        <class className="MasterViewControllerTown" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewControllerTown.h"/>
+        </class>
+        <class className="MasterViewControllerTown1" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewControllerTown1.h"/>
+        </class>
+        <class className="SplashViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SplashViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="download:"/>
+                <relationship kind="outlet" name="DetailText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="advance" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="download" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="WebBrowserViewControllerCat" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebBrowserViewControllerCat.h"/>
+        </class>
+        <class className="WebBrowserViewControllerName" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebBrowserViewControllerName.h"/>
+        </class>
+        <class className="WebBrowserViewControllerTown" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebBrowserViewControllerTown.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

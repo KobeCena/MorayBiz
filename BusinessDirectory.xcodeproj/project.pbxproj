@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6D078EB41587C7FA003F1B5B /* DetailViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D078EB31587C7FA003F1B5B /* DetailViewControllerCategory.m */; };
 		6D266EC715A37D9700BC8732 /* MapsWebViewControllerCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D266EC615A37D9700BC8732 /* MapsWebViewControllerCat.m */; };
-		6D2D863615B5A427000DB204 /* JustAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2D863515B5A427000DB204 /* JustAViewController.m */; };
 		6D44747C15322134003CD9E9 /* MasterViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D44747B15322134003CD9E9 /* MasterViewControllerCategory.m */; };
 		6D7720DC155DA79A00DA9B70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7720DA155DA79A00DA9B70 /* Default.png */; };
 		6D7720DD155DA79A00DA9B70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7720DB155DA79A00DA9B70 /* Default@2x.png */; };
@@ -79,8 +78,6 @@
 		6D078EB31587C7FA003F1B5B /* DetailViewControllerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerCategory.m; sourceTree = "<group>"; };
 		6D266EC515A37D9700BC8732 /* MapsWebViewControllerCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsWebViewControllerCat.h; sourceTree = "<group>"; };
 		6D266EC615A37D9700BC8732 /* MapsWebViewControllerCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsWebViewControllerCat.m; sourceTree = "<group>"; };
-		6D2D863415B5A427000DB204 /* JustAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JustAViewController.h; sourceTree = "<group>"; };
-		6D2D863515B5A427000DB204 /* JustAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JustAViewController.m; sourceTree = "<group>"; };
 		6D3D1F7515586405006DC055 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6D3D1F7815586A13006DC055 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		6D3D1F7A15586A18006DC055 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -285,8 +282,6 @@
 				6D7BD0FD1583FE9D0084C6C6 /* SplashViewController.m */,
 				6D7BD0FF158401F70084C6C6 /* MyTabBarController.h */,
 				6D7BD100158401F70084C6C6 /* MyTabBarController.m */,
-				6D2D863415B5A427000DB204 /* JustAViewController.h */,
-				6D2D863515B5A427000DB204 /* JustAViewController.m */,
 				6D95CD72154B197A0041376E /* By Name */,
 				6D95CD73154B19910041376E /* By Category */,
 				6D95CD75154B19D20041376E /* By Town */,
@@ -496,7 +491,6 @@
 				6D97460715A394CD00BD61B0 /* WebBrowserViewControllerName.m in Sources */,
 				6D97460A15A394DB00BD61B0 /* WebBrowserViewControllerCat.m in Sources */,
 				6D97460D15A394E800BD61B0 /* WebBrowserViewControllerTown.m in Sources */,
-				6D2D863615B5A427000DB204 /* JustAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
